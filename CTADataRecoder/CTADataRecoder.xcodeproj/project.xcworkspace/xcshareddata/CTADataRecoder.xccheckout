@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>616D000D-E51E-4FE8-B6DE-D196F5338378</string>
+	<key>IDESourceControlProjectName</key>
+	<string>CTADataRecoder</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>632A4D45-7EA0-417C-A39B-19BB55142BF2</key>
+		<string>https://github.com/JohnmarkBeaty/CTADataRecorder.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>CTADataRecoder/CTADataRecoder.xcodeproj/project.xcworkspace</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>632A4D45-7EA0-417C-A39B-19BB55142BF2</key>
+		<string>../../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/JohnmarkBeaty/CTADataRecorder.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>110</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>632A4D45-7EA0-417C-A39B-19BB55142BF2</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>632A4D45-7EA0-417C-A39B-19BB55142BF2</string>
+			<key>IDESourceControlWCCName</key>
+			<string>CTADataRecorder</string>
+		</dict>
+	</array>
+</dict>
+</plist>
