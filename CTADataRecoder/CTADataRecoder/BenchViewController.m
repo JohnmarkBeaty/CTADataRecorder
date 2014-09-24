@@ -69,6 +69,14 @@
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
+- (IBAction)back:(id)sender {
+#warning Johnmark save logic here.
+    [self.navigationController popToRootViewControllerAnimated:YES];
+}
+
+- (BOOL)textFieldShouldReturn:(UITextField *)textField{
+    return YES;
+}
 
 /*
 #pragma mark - Navigation

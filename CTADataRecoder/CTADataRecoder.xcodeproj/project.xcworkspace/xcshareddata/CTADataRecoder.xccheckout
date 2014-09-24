@@ -10,29 +10,29 @@
 	<string>CTADataRecoder</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
 	<dict>
-		<key>632A4D45-7EA0-417C-A39B-19BB55142BF2</key>
+		<key>6FFDC00D9224D7C0299A044E72CC024A939078BA</key>
 		<string>https://github.com/JohnmarkBeaty/CTADataRecorder.git</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
 	<string>CTADataRecoder/CTADataRecoder.xcodeproj/project.xcworkspace</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
-		<key>632A4D45-7EA0-417C-A39B-19BB55142BF2</key>
+		<key>6FFDC00D9224D7C0299A044E72CC024A939078BA</key>
 		<string>../../..</string>
 	</dict>
 	<key>IDESourceControlProjectURL</key>
 	<string>https://github.com/JohnmarkBeaty/CTADataRecorder.git</string>
 	<key>IDESourceControlProjectVersion</key>
-	<integer>110</integer>
+	<integer>111</integer>
 	<key>IDESourceControlProjectWCCIdentifier</key>
-	<string>632A4D45-7EA0-417C-A39B-19BB55142BF2</string>
+	<string>6FFDC00D9224D7C0299A044E72CC024A939078BA</string>
 	<key>IDESourceControlProjectWCConfigurations</key>
 	<array>
 		<dict>
 			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
 			<string>public.vcs.git</string>
 			<key>IDESourceControlWCCIdentifierKey</key>
-			<string>632A4D45-7EA0-417C-A39B-19BB55142BF2</string>
+			<string>6FFDC00D9224D7C0299A044E72CC024A939078BA</string>
 			<key>IDESourceControlWCCName</key>
 			<string>CTADataRecorder</string>
 		</dict>

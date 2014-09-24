@@ -9,6 +9,6 @@
 #import <UIKit/UIKit.h>
 #import <CoreLocation/CoreLocation.h>
 
-@interface ParkingViewController : UIViewController
+@interface ParkingViewController : UIViewController <CLLocationManagerDelegate>
 
 @end

@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2C1F5C311982C1350090A676 /* Trash.png in Resources */ = {isa = PBXBuildFile; fileRef = 2C1F5C301982C1350090A676 /* Trash.png */; };
+		2C1F5C341982C1D60090A676 /* TrashViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C1F5C331982C1D60090A676 /* TrashViewController.m */; };
+		2C9FA30A19CD2D3400C1D448 /* Restrooms.png in Resources */ = {isa = PBXBuildFile; fileRef = 2C9FA30919CD2D3400C1D448 /* Restrooms.png */; };
+		2C9FA30D19CD57AF00C1D448 /* TableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C9FA30C19CD57AF00C1D448 /* TableViewController.m */; };
 		2CC3149D197FA2CF002079D5 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2CC3149C197FA2CF002079D5 /* Foundation.framework */; };
 		2CC3149F197FA2CF002079D5 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2CC3149E197FA2CF002079D5 /* CoreGraphics.framework */; };
 		2CC314A1197FA2CF002079D5 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2CC314A0197FA2CF002079D5 /* UIKit.framework */; };
@@ -51,6 +55,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		2C1F5C301982C1350090A676 /* Trash.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Trash.png; sourceTree = "<group>"; };
+		2C1F5C321982C1D60090A676 /* TrashViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TrashViewController.h; sourceTree = "<group>"; };
+		2C1F5C331982C1D60090A676 /* TrashViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TrashViewController.m; sourceTree = "<group>"; };
+		2C9FA30919CD2D3400C1D448 /* Restrooms.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Restrooms.png; sourceTree = "<group>"; };
+		2C9FA30B19CD57AF00C1D448 /* TableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TableViewController.h; path = ../TableViewController.h; sourceTree = "<group>"; };
+		2C9FA30C19CD57AF00C1D448 /* TableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TableViewController.m; path = ../TableViewController.m; sourceTree = "<group>"; };
 		2CC31499197FA2CF002079D5 /* CTADataRecoder.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CTADataRecoder.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2CC3149C197FA2CF002079D5 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		2CC3149E197FA2CF002079D5 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -177,6 +187,10 @@
 				2CC314EB197FAB69002079D5 /* WaterViewController.m */,
 				2CC314ED197FAB77002079D5 /* ParksViewController.h */,
 				2CC314EE197FAB77002079D5 /* ParksViewController.m */,
+				2C1F5C321982C1D60090A676 /* TrashViewController.h */,
+				2C1F5C331982C1D60090A676 /* TrashViewController.m */,
+				2C9FA30B19CD57AF00C1D448 /* TableViewController.h */,
+				2C9FA30C19CD57AF00C1D448 /* TableViewController.m */,
 				2CC314B4197FA2CF002079D5 /* Images.xcassets */,
 				2CC314D1197FA350002079D5 /* Add.png */,
 				2CC314D2197FA350002079D5 /* Bench.png */,
@@ -184,7 +198,9 @@
 				2CC314D4197FA350002079D5 /* Park.png */,
 				2CC314D5197FA350002079D5 /* Parking.png */,
 				2CC314D6197FA350002079D5 /* Repairs.png */,
+				2C9FA30919CD2D3400C1D448 /* Restrooms.png */,
 				2CC314D7197FA350002079D5 /* Shops.png */,
+				2C1F5C301982C1350090A676 /* Trash.png */,
 				2CC314D8197FA350002079D5 /* Water.png */,
 				2CC314A3197FA2CF002079D5 /* Supporting Files */,
 			);
@@ -267,6 +283,9 @@
 				LastUpgradeCheck = 0510;
 				ORGANIZATIONNAME = "Eddie Koranek";
 				TargetAttributes = {
+					2CC31498197FA2CF002079D5 = {
+						DevelopmentTeam = 7M4W2Y3X7H;
+					};
 					2CC314B9197FA2CF002079D5 = {
 						TestTargetID = 2CC31498197FA2CF002079D5;
 					};
@@ -302,8 +321,10 @@
 				2CC314DD197FA350002079D5 /* Parking.png in Resources */,
 				2CC314A7197FA2CF002079D5 /* InfoPlist.strings in Resources */,
 				2CC314B0197FA2CF002079D5 /* Main.storyboard in Resources */,
+				2C1F5C311982C1350090A676 /* Trash.png in Resources */,
 				2CC314DB197FA350002079D5 /* Info.png in Resources */,
 				2CC314DA197FA350002079D5 /* Bench.png in Resources */,
+				2C9FA30A19CD2D3400C1D448 /* Restrooms.png in Resources */,
 				2CC314D9197FA350002079D5 /* Add.png in Resources */,
 				2CC314DE197FA350002079D5 /* Repairs.png in Resources */,
 				2CC314E0197FA350002079D5 /* Water.png in Resources */,
@@ -330,7 +351,9 @@
 				2CC314B3197FA2CF002079D5 /* ViewController.m in Sources */,
 				2CC314EC197FAB69002079D5 /* WaterViewController.m in Sources */,
 				2CC314AD197FA2CF002079D5 /* AppDelegate.m in Sources */,
+				2C1F5C341982C1D60090A676 /* TrashViewController.m in Sources */,
 				2CC314E9197FAB59002079D5 /* InfoViewController.m in Sources */,
+				2C9FA30D19CD57AF00C1D448 /* TableViewController.m in Sources */,
 				2CC314F8197FAB9A002079D5 /* RepairsViewController.m in Sources */,
 				2CC314E3197FA511002079D5 /* AddViewController.m in Sources */,
 				2CC314F5197FAB91002079D5 /* ParkingViewController.m in Sources */,
@@ -540,6 +563,7 @@
 				2CC314CD197FA2CF002079D5 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		2CC314CE197FA2CF002079D5 /* Build configuration list for PBXNativeTarget "CTADataRecoderTests" */ = {
 			isa = XCConfigurationList;
@@ -548,6 +572,7 @@
 				2CC314D0197FA2CF002079D5 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

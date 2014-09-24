@@ -14,7 +14,7 @@
 @property (nonatomic, weak)IBOutlet UILabel *longitude;
 @property (nonatomic, weak)IBOutlet UISegmentedControl *directionOffTrail;
 @property (nonatomic, weak)IBOutlet UITextField *name;
-@property (nonatomic, weak)IBOutlet UITextView *description;
+@property (nonatomic, weak)IBOutlet UITextView *describe;
 
 @end
 
@@ -70,6 +70,15 @@
 {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+- (IBAction)back:(id)sender {
+#warning Johnmark save logic here.
+    [self.navigationController popToRootViewControllerAnimated:YES];
+}
+
+- (BOOL)textFieldShouldReturn:(UITextField *)textField{
+    [textField resignFirstResponder];
+    return YES;
 }
 
 /*

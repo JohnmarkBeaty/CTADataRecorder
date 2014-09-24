@@ -72,6 +72,19 @@
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
+- (IBAction)back:(id)sender {
+#warning Johnmark save logic here.
+    [self.navigationController popToRootViewControllerAnimated:YES];
+}
+- (IBAction)countTables:(id)sender {
+    int amount = _adjustAmount.value;
+    _picnicTables.text = [NSString stringWithFormat:@"%@ %i", @"Picninc Tables:", amount];
+}
+
+- (BOOL)textFieldShouldReturn:(UITextField *)textField{
+    [textField resignFirstResponder];
+    return YES;
+}
 
 /*
 #pragma mark - Navigation

@@ -9,6 +9,6 @@
 #import <UIKit/UIKit.h>
 #import <CoreLocation/CoreLocation.h>
 
-@interface ShopsViewController : UIViewController
+@interface ShopsViewController : UIViewController <CLLocationManagerDelegate, UITextFieldDelegate>
 
 @end

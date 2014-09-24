@@ -1,33 +1,31 @@
 //
-//  AddViewController.m
+//  TrashViewController.m
 //  CTADataRecoder
 //
-//  Created by Eddie Koranek on 7/23/14.
+//  Created by Eddie Koranek on 7/25/14.
 //  Copyright (c) 2014 Eddie Koranek. All rights reserved.
 //
 
-#import "AddViewController.h"
+#import "TrashViewController.h"
 
-@interface AddViewController ()
+@interface TrashViewController ()
 
 @property (nonatomic, weak)IBOutlet UILabel *latitude;
 @property (nonatomic, weak)IBOutlet UILabel *longitude;
 @property (nonatomic, weak)IBOutlet UISegmentedControl *directionOffTrail;
-@property (nonatomic, weak)IBOutlet UITextField *name;
-@property (nonatomic, weak)IBOutlet UITextView *describe;
 
 @end
 
-@implementation AddViewController {
+@implementation TrashViewController {
     CLLocationManager *locationManager;
 }
+
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
         // Custom initialization
-        
     }
     return self;
 }
@@ -37,7 +35,6 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     locationManager = [[CLLocationManager alloc] init];
-    
 }
 
 - (void)viewDidAppear:(BOOL)animated{
@@ -73,15 +70,9 @@
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
-
 - (IBAction)back:(id)sender {
 #warning Johnmark save logic here.
     [self.navigationController popToRootViewControllerAnimated:YES];
-}
-
-- (BOOL)textFieldShouldReturn:(UITextField *)textField{
-    [textField resignFirstResponder];
-    return YES;
 }
 
 /*

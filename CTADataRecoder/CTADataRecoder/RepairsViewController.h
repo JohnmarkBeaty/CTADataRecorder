@@ -9,6 +9,6 @@
 #import <UIKit/UIKit.h>
 #import <CoreLocation/CoreLocation.h>
 
-@interface RepairsViewController : UIViewController
+@interface RepairsViewController : UIViewController <CLLocationManagerDelegate>
 
 @end

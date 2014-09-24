@@ -9,6 +9,6 @@
 #import <UIKit/UIKit.h>
 #import <CoreLocation/CoreLocation.h>
 
-@interface InfoViewController : UIViewController
+@interface InfoViewController : UIViewController <CLLocationManagerDelegate, UITextFieldDelegate>
 
 @end

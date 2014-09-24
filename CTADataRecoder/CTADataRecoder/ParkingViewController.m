@@ -15,11 +15,12 @@
 @property (nonatomic, weak)IBOutlet UISegmentedControl *directionOffTrail;
 @property (nonatomic, weak)IBOutlet UILabel *parkingSpots;
 @property (nonatomic, weak)IBOutlet UIStepper *adjustAmount;
+@property (nonatomic, retain)IBOutlet CLLocationManager *locationManager;
 
 @end
 
 @implementation ParkingViewController {
-    CLLocationManager *locationManager;
+  //  CLLocationManager *locationManager;
 }
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
@@ -35,14 +36,18 @@
 {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    locationManager = [[CLLocationManager alloc] init];
+    _locationManager = [[CLLocationManager alloc] init];
+    
+    
 }
 
 - (void)viewDidAppear:(BOOL)animated{
-    locationManager.delegate = self;
-    locationManager.desiredAccuracy = kCLLocationAccuracyBest;
+    _locationManager.delegate = self;
+    _locationManager.desiredAccuracy = kCLLocationAccuracyBest;
     
-    [locationManager startUpdatingLocation];
+    [_locationManager startUpdatingLocation];
+    
+    
 }
 
 #pragma mark - CLLocationManagerDelegate
@@ -70,6 +75,14 @@
 {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+- (IBAction)back:(id)sender {
+#warning Johnmark save logic here.
+    [self.navigationController popToRootViewControllerAnimated:YES];
+}
+- (IBAction)countParkingSpots:(id)sender {
+    int amount = _adjustAmount.value;
+    _parkingSpots.text = [NSString stringWithFormat:@"%@: %i", @"Parking Spots", amount];    
 }
 
 /*
