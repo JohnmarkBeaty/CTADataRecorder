@@ -7,6 +7,7 @@
 //
 
 #import "WaterViewController.h"
+#import "stop.h"
 
 @interface WaterViewController ()
 
@@ -19,6 +20,10 @@
 
 @implementation WaterViewController {
     CLLocationManager *locationManager;
+    CLLocation *currentLocation;
+    double lat;
+    double lon;
+    bool da;
 }
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
@@ -57,9 +62,13 @@
 - (void)locationManager:(CLLocationManager *)manager didUpdateToLocation:(CLLocation *)newLocation fromLocation:(CLLocation *)oldLocation
 {
     NSLog(@"didUpdateToLocation: %@", newLocation);
-    CLLocation *currentLocation = newLocation;
+     currentLocation = newLocation;
     
     if (currentLocation != nil) {
+        
+        lat = currentLocation.coordinate.latitude;
+        lon = currentLocation.coordinate.longitude;
+        
         _longitude.text = [NSString stringWithFormat:@"%.12f", currentLocation.coordinate.longitude];
         _latitude.text = [NSString stringWithFormat:@"%.12f", currentLocation.coordinate.latitude];
     }
@@ -70,8 +79,30 @@
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
-- (IBAction)back:(id)sender {
-#warning Johnmark save logic here.
+- (IBAction)save:(id)sender {
+    
+    if (_dogAccessible.on == 0)
+    {
+        da = false;
+    } else {
+        da = true;
+    }
+    
+    char *DOT;
+    if (_directionOffTrail.selectedSegmentIndex == 0) {
+        DOT = "N";
+    } else if (_directionOffTrail.selectedSegmentIndex == 1) {
+        DOT = "E";
+    } else if (_directionOffTrail.selectedSegmentIndex == 2) {
+        DOT = "S";
+    } else if (_directionOffTrail.selectedSegmentIndex == 3) {
+        DOT = "W";
+    }
+
+    stop *water = [[stop alloc] initWithType:@"Water_Fountian" lat:&(lat) lon:&(lon) DOT: DOT picnicTables:nil parkingSpots: nil handicapAccessible:nil dogAccessible:&(da)];
+    water.saveStop;
+    
+    
     [self.navigationController popToRootViewControllerAnimated:YES];
 }
 

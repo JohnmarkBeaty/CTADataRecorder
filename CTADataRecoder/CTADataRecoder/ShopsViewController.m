@@ -7,6 +7,7 @@
 //
 
 #import "ShopsViewController.h"
+#import "stop.h"
 
 @interface ShopsViewController ()
 
@@ -16,10 +17,14 @@
 @property (nonatomic, weak)IBOutlet UISwitch *handicap;
 
 
+
 @end
 
 @implementation ShopsViewController {
     CLLocationManager *locationManager;
+    double lat;
+    double lon;
+    bool da;
 }
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
@@ -61,6 +66,9 @@
     CLLocation *currentLocation = newLocation;
     
     if (currentLocation != nil) {
+        lat = currentLocation.coordinate.latitude;
+        lon = currentLocation.coordinate.longitude;
+        
         _longitude.text = [NSString stringWithFormat:@"%.12f", currentLocation.coordinate.longitude];
         _latitude.text = [NSString stringWithFormat:@"%.12f", currentLocation.coordinate.latitude];
     }
@@ -71,8 +79,35 @@
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
-- (IBAction)back:(id)sender {
-#warning Johnmark save logic here.
+- (IBAction)save:(id)sender {
+
+    
+    if (_handicap.on == 0)
+    {
+        da = false;
+    } else {
+        da = true;
+    }
+    
+    char *DOT;
+    if (_directionOffTrail.selectedSegmentIndex == 0) {
+        DOT = "N";
+    } else if (_directionOffTrail.selectedSegmentIndex == 1) {
+        DOT = "E";
+    } else if (_directionOffTrail.selectedSegmentIndex == 2) {
+        DOT = "S";
+    } else if (_directionOffTrail.selectedSegmentIndex == 3) {
+        DOT = "W";
+    }
+    
+    stop *bathroom = [[stop alloc] initWithType:@"Bathroom" lat:&(lat) lon:&(lon) DOT: DOT picnicTables:nil parkingSpots: nil handicapAccessible:&(da) dogAccessible:nil];
+    bathroom.saveStop;
+    
+    
+    
+    
+    
+    
     [self.navigationController popToRootViewControllerAnimated:YES];
 }
 

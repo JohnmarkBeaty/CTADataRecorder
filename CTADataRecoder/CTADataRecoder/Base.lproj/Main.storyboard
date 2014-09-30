@@ -5,6 +5,33 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6238"/>
     </dependencies>
     <scenes>
+        <!--Database Map-->
+        <scene sceneID="rPV-hl-Okz">
+            <objects>
+                <viewController id="XiP-3H-vgm" customClass="MapViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="pIb-qQ-v3b"/>
+                        <viewControllerLayoutGuide type="bottom" id="v5b-qz-kqw"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="CPm-or-fSa">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="j0s-uE-Sro">
+                                <rect key="frame" x="0.0" y="64" width="320" height="504"/>
+                            </mapView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Database Map" id="4X9-AW-f6Z"/>
+                    <connections>
+                        <outlet property="map" destination="j0s-uE-Sro" id="MQd-jN-q9b"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="87O-FF-f6d" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-50" y="-551"/>
+        </scene>
         <!--Database-->
         <scene sceneID="ec2-Hr-pBT">
             <objects>
@@ -27,12 +54,6 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="Database" id="YWb-6L-LHj">
-                        <barButtonItem key="leftBarButtonItem" systemItem="reply" id="jLg-js-Njg">
-                            <color key="tintColor" red="0.40000000000000002" green="0.96078431369999995" blue="0.58431372550000005" alpha="1" colorSpace="deviceRGB"/>
-                            <connections>
-                                <action selector="done:" destination="MFj-11-Mau" id="PLV-EO-izQ"/>
-                            </connections>
-                        </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" systemItem="done" id="Rxd-GO-mYf">
                             <color key="tintColor" red="0.40000000000000002" green="0.96078431369999995" blue="0.58431372550000005" alpha="1" colorSpace="deviceRGB"/>
                             <connections>
@@ -403,9 +424,9 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" title="Select Type" id="XVs-JS-m03">
-                        <barButtonItem key="leftBarButtonItem" systemItem="organize" id="dFz-dP-Gyn">
+                        <barButtonItem key="leftBarButtonItem" title="Map" id="CcP-x5-FQf">
                             <connections>
-                                <segue destination="MFj-11-Mau" kind="push" id="CxW-pF-kgc"/>
+                                <segue destination="XiP-3H-vgm" kind="push" id="yNQ-U1-NXq"/>
                             </connections>
                         </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" systemItem="edit" id="X3Q-cJ-wid">
@@ -629,7 +650,7 @@
                         <barButtonItem key="rightBarButtonItem" systemItem="done" id="HzD-gp-4K0">
                             <color key="tintColor" red="0.40000000600000002" green="0.96086516200000005" blue="0.58535879629999998" alpha="1" colorSpace="calibratedRGB"/>
                             <connections>
-                                <action selector="back:" destination="nAq-ho-KA9" id="ASF-TK-gwf"/>
+                                <action selector="save:" destination="nAq-ho-KA9" id="tDI-VP-voc"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -809,7 +830,7 @@
                         <barButtonItem key="rightBarButtonItem" systemItem="done" id="bNU-f9-n0Z">
                             <color key="tintColor" red="0.40000000600000002" green="0.96086516200000005" blue="0.58535879629999998" alpha="1" colorSpace="calibratedRGB"/>
                             <connections>
-                                <action selector="back:" destination="HER-Ef-3CH" id="pzx-5F-pgj"/>
+                                <action selector="save:" destination="HER-Ef-3CH" id="y9l-fB-qw2"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -891,7 +912,7 @@
                         <barButtonItem key="rightBarButtonItem" systemItem="done" id="h8n-8k-0v3">
                             <color key="tintColor" red="0.40000000600000002" green="0.96086516200000005" blue="0.58535879629999998" alpha="1" colorSpace="calibratedRGB"/>
                             <connections>
-                                <action selector="back:" destination="ml9-Hy-apN" id="OTz-hA-pvR"/>
+                                <action selector="save:" destination="ml9-Hy-apN" id="3xQ-JD-sU4"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -941,7 +962,4 @@
         <simulatedOrientationMetrics key="orientation"/>
         <simulatedScreenMetrics key="destination" type="retina4"/>
     </simulatedMetricsContainer>
-    <inferredMetricsTieBreakers>
-        <segue reference="VXv-SL-dkz"/>
-    </inferredMetricsTieBreakers>
 </document>

@@ -7,20 +7,30 @@
 //
 
 #import "ViewController.h"
+#import <sqlite3.h>
+
+
 
 @interface ViewController ()
 
 @property(nonatomic, retain)IBOutlet CLLocationManager *locationManager;
 
+
 @end
 
 @implementation ViewController
-
 
 - (void)viewDidLoad
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
+    
+    
+    
+    
+    
+    
+    
     self.navigationController.navigationBar.tintColor = [UIColor colorWithRed:102.0/255.0 green:245.0/255.0 blue:149.0/255.0 alpha:1];
     [_locationManager requestAlwaysAuthorization];
 }

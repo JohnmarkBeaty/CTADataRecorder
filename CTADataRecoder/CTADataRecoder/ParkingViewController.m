@@ -7,6 +7,7 @@
 //
 
 #import "ParkingViewController.h"
+#import "stop.h"
 
 @interface ParkingViewController ()
 
@@ -20,6 +21,10 @@
 @end
 
 @implementation ParkingViewController {
+    
+    double lat;
+    double lon;
+    bool da;
   //  CLLocationManager *locationManager;
 }
 
@@ -65,9 +70,13 @@
     NSLog(@"didUpdateToLocation: %@", newLocation);
     CLLocation *currentLocation = newLocation;
     
+    
     if (currentLocation != nil) {
         _longitude.text = [NSString stringWithFormat:@"%.12f", currentLocation.coordinate.longitude];
         _latitude.text = [NSString stringWithFormat:@"%.12f", currentLocation.coordinate.latitude];
+        
+        lat = currentLocation.coordinate.latitude;
+        lon = currentLocation.coordinate.longitude;
     }
 }
 
@@ -76,8 +85,30 @@
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
-- (IBAction)back:(id)sender {
-#warning Johnmark save logic here.
+- (IBAction)save:(id)sender {
+    
+    double PS;
+    
+    PS = _adjustAmount.value;
+    
+    char *DOT;
+    if (_directionOffTrail.selectedSegmentIndex == 0) {
+        DOT = "N";
+    } else if (_directionOffTrail.selectedSegmentIndex == 1) {
+        DOT = "E";
+    } else if (_directionOffTrail.selectedSegmentIndex == 2) {
+        DOT = "S";
+    } else if (_directionOffTrail.selectedSegmentIndex == 3) {
+        DOT = "W";
+    }
+    
+    stop *parking = [[stop alloc] initWithType:@"Parking" lat:&(lat) lon:&(lon) DOT: DOT picnicTables:nil parkingSpots: &PS handicapAccessible:nil dogAccessible:nil];
+    parking.saveStop;
+
+    
+    
+    
+    
     [self.navigationController popToRootViewControllerAnimated:YES];
 }
 - (IBAction)countParkingSpots:(id)sender {
